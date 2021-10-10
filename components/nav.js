@@ -7,7 +7,7 @@ const StyledNav = styled.nav`
 
 export const Nav = () => {
   return (
-    <StyledNav className="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
+    <StyledNav className="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block bg-black" data-navbar-on-scroll="data-navbar-on-scroll">
       <div className="container"><a className="navbar-brand d-inline-flex" href="index.html"><span className="text-light fs-2 fw-bold ms-2">DZ Ski School</span></a>
         <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
         <div className="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">

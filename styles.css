@@ -7872,6 +7872,10 @@ fieldset:disabled .btn {
   width: 100% !important;
 }
 
+.miw-50 {
+  min-width: 50%;
+}
+
 .w-auto {
   width: auto !important;
 }

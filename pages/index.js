@@ -25,6 +25,24 @@ const HOMEPAGE_QUERY = `{
     paragrapheCopy4
     titreCopy5
   }
+  allNews {
+    titre
+    accroche
+    lienDuRSeauSocial
+    icone{
+      url
+    }
+    lienDuRSeauSocialCopy1
+    iconeCopy1{
+      url
+    }
+    imagesDeLaGalerie{
+      responsiveImage{
+        src
+        srcSet
+      }
+    }
+  }
 }`;
 
 export async function getStaticProps() {
@@ -37,13 +55,13 @@ export async function getStaticProps() {
 }
 
 const Index = ({ data }) => {
-  const { allHomes, allServices } = data
+  const { allHomes, allServices, allNews } = data
   return (
     <Layout>
       <Nav />
       <Home data={allHomes[0]} />
       <Services data={allServices[0]} />
-      <News />
+      <News data={allNews[0]} />
       <Prices />
       <Contact />
     </Layout>
