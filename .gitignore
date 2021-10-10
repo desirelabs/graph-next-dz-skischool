@@ -4,3 +4,4 @@ vim/
 vscode/
 out/
 .next/
+.env
