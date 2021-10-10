@@ -12,6 +12,19 @@ const HOMEPAGE_QUERY = `{
     heading
     headingCopy1
   }
+  allServices {
+    titre
+    paragraphe
+    titreCopy1
+    paragrapheCopy1
+    titreCopy2
+    paragrapheCopy2
+    titreCopy3
+    paragrapheCopy3
+    titreCopy4
+    paragrapheCopy4
+    titreCopy5
+  }
 }`;
 
 export async function getStaticProps() {
@@ -24,12 +37,12 @@ export async function getStaticProps() {
 }
 
 const Index = ({ data }) => {
-  const { allHomes } = data
+  const { allHomes, allServices } = data
   return (
     <Layout>
       <Nav />
       <Home data={allHomes[0]} />
-      <Services />
+      <Services data={allServices[0]} />
       <News />
       <Prices />
       <Contact />
