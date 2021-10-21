@@ -1,5 +1,5 @@
-import { Layout } from "../components/layout"
-import { Nav } from "../components/nav"
+import { Layout } from "../components/layout";
+import { Nav } from "../components/nav";
 import { Home } from "../components/home";
 import { Services } from "../components/services";
 import { News } from "../components/news";
@@ -43,6 +43,13 @@ const HOMEPAGE_QUERY = `{
       }
     }
   }
+  allPrixes{
+    order
+    suggR
+    descriptionDeTarif
+    tarif
+    titreDeTarif
+  }
 }`;
 
 export async function getStaticProps() {
@@ -50,22 +57,22 @@ export async function getStaticProps() {
     query: HOMEPAGE_QUERY,
   });
   return {
-    props: { data }
+    props: { data },
   };
 }
 
 const Index = ({ data }) => {
-  const { allHomes, allServices, allNews } = data
+  const { allHomes, allServices, allNews, allPrixes } = data;
   return (
     <Layout>
       <Nav />
       <Home data={allHomes[0]} />
       <Services data={allServices[0]} />
       <News data={allNews[0]} />
-      <Prices />
+      <Prices data={allPrixes} />
       <Contact />
     </Layout>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;

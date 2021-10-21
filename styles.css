@@ -18553,6 +18553,139 @@ Calaendar icon input[type="date"]::-webkit-calendar-picker-indicator {
 /*-----------------------------------------------
 |   User Styles
 -----------------------------------------------*/
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+.pricing {
+    font-family: "Montserrat", sans-serif;
+    color: #8d97ad;
+    font-weight: 300;
+}
 
+.pricing h4 {
+    color: #3e4555;
+    text-align: center;
+}
+
+.pricing h5 {
+    line-height: 22px;
+    font-size: 18px;
+}
+
+.pricing .font-weight-medium {
+    font-weight: 500;
+}
+
+.pricing .bg-light {
+    background-color: #f4f8fa !important;
+}
+
+.pricing .subtitle {
+    color: #8d97ad;
+    line-height: 24px;
+}
+
+.pricing .card.card-shadow {
+    -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+    box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+
+.pricing .general-listing {
+    margin: 90px 0 60px 0;
+}
+
+.pricing .card {
+    border-radius: 8px;
+    overflow: hidden;
+    background-size: 100% !important;
+}
+
+.pricing .yearly {
+    display: none;
+}
+
+.pricing .pricing-box {
+    margin-top: 120px;
+}
+
+.pricing .pricing-box .middle-box {
+    margin-top: -75px;
+}
+
+.pricing .pricing-box .middle-box .general-listing {
+    margin-top: 60px;
+}
+
+@media (max-width: 767px) {
+    .pricing .pricing-box {
+        margin-top: 40px;
+    }
+    .pricing .pricing-box .middle-box {
+        margin-top: 0px;
+    }
+}
+
+.pricing .btn-success-gradiant {
+    background: #2cdd9b;
+    background: -webkit-linear-gradient(
+            legacy-direction(to right),
+            #2cdd9b 0%,
+            #1dc8cc 100%
+    );
+    background: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            from(#2cdd9b),
+            to(#1dc8cc)
+    );
+    background: -webkit-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: -o-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+    background: linear-gradient(to right, #2cdd9b 0%, #1dc8cc 100%);
+}
+
+.pricing .btn-success-gradiant:hover {
+    background: #1dc8cc;
+    background: -webkit-linear-gradient(
+            legacy-direction(to right),
+            #1dc8cc 0%,
+            #2cdd9b 100%
+    );
+    background: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            from(#1dc8cc),
+            to(#2cdd9b)
+    );
+    background: -webkit-linear-gradient(left, #1dc8cc 0%, #2cdd9b 100%);
+    background: -o-linear-gradient(left, #1dc8cc 0%, #2cdd9b 100%);
+    background: linear-gradient(to right, #1dc8cc 0%, #2cdd9b 100%);
+}
+
+.pricing .btn-md {
+    padding: 15px 45px;
+    font-size: 16px;
+}
+
+.pricing .rounded-left {
+    border-top-left-radius: 60px !important;
+    border-bottom-left-radius: 60px !important;
+}
+
+.pricing .rounded-right {
+    border-top-right-radius: 60px !important;
+    border-bottom-right-radius: 60px !important;
+}
+
+.pricing .btn-outline-success {
+    color: #e21313;
+    background-color: transparent;
+    border-color: #e21313;
+}
+
+.pricing .btn-outline-success:hover {
+    background: #e21313;
+    border-color: #e21313;
+    color: #ffffff;
+}
 /*# sourceMappingURL=theme.css.map */
 
