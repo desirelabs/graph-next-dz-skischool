@@ -15,14 +15,34 @@ const HOMEPAGE_QUERY = `{
   allServices {
     titre
     paragraphe
+    image{
+      url
+      alt
+    }
     titreCopy1
     paragrapheCopy1
+    imageCopy1{
+      url
+      alt
+    }
     titreCopy2
     paragrapheCopy2
+    imageCopy2{
+      url
+      alt
+    }
     titreCopy3
     paragrapheCopy3
+    imageCopy3{
+      url
+      alt
+    }
     titreCopy4
     paragrapheCopy4
+    imageCopy4{
+      url
+      alt
+    }
     titreCopy5
   }
   allNews {

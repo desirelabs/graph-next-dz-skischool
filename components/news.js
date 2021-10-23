@@ -7,7 +7,7 @@ const Img = styled.img`
 
 const LeftReseau = ({ accroche, lien, icone }) => {
   return (
-    <span className=" pull-right">
+    <span className="float-end">
       {accroche.split("us").map(
         (chunck, i) =>
           i === 0 && (
@@ -26,7 +26,7 @@ const LeftReseau = ({ accroche, lien, icone }) => {
 
 const RightReseau = ({ accroche, lien, icone }) => {
   return (
-    <Fragment>
+    <span className="float-start">
       {accroche.split("us").map(
         (chunck, i) =>
           i === 1 && (
@@ -38,11 +38,13 @@ const RightReseau = ({ accroche, lien, icone }) => {
             </span>
           )
       )}
-    </Fragment>
+    </span>
   );
 };
 
-const StyledSection = styled.section`
+const StyledSection = styled.section.attrs({
+  className: "pb-5 pt-5",
+})`
   background-color: #ebf9ff;
 `;
 
@@ -60,11 +62,11 @@ export const News = ({ data }) => {
     <StyledSection className="py-0 pb-6" id="news">
       <div className="container">
         <div className="text-center">
-          <h5 className="fs-3 fs-lg-5 lh-sm mb-0 text-uppercase text-dark">
+          <h5 className="fs-3 fs-lg-5 lh-sm mb-0 text-uppercase text-dark mb-3">
             {titre}
           </h5>
         </div>
-        <div className="row h-100 d-lg-flex align-items-center">
+        <div className="row h-100 d-lg-flex align-items-center mb-4">
           <div className="col-6">
             <LeftReseau
               accroche={accroche}
