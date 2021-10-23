@@ -1,6 +1,7 @@
 export const ContactForm = () => {
   return (
-    <form name="contact" data-netlify="true">
+    <form name="contact" action="/success" method="POST" data-netlify="true">
+      <input type="hidden" name="Contact-Form" value="contact" />
       <p>
         <label>
           Name <input type="text" name="name" />
