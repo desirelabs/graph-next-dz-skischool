@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-
 const Card = (props) => {
   const { titreDeTarif, descriptionDeTarif, tarif } = props;
   return (
@@ -30,7 +28,9 @@ export const Prices = ({ data }) => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-8 text-center">
-              <h3 className="mb-3">Pricing to make you glide</h3>
+              <h3 className="fs-3 fs-lg-5 lh-sm mb-0 text-uppercase">
+                Pricing to make you glide
+              </h3>
             </div>
           </div>
           <div className="row text-center pricing-box">
