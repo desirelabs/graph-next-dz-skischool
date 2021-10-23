@@ -1,5 +1,6 @@
 import { ContactForm } from "./form";
 import Markdown from "markdown-to-jsx";
+import { SectionTitle } from "./styled";
 
 export const Contact = (props) => {
   const { data } = props;
@@ -9,7 +10,7 @@ export const Contact = (props) => {
       <div className="container">
         <div className="row">
           <div className="col-lg-7 mx-auto text-center my-5">
-            <h5 className="fs-3 fs-lg-5 lh-sm mb-0 text-uppercase">{titre}</h5>
+            <SectionTitle>{titre}</SectionTitle>
             <p>
               <Markdown options={{ forceBlock: true }}>{paragraphe}</Markdown>
             </p>

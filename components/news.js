@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Fragment } from "react";
+import { SectionTitle } from "./styled";
 
 const Img = styled.img`
   margin: 12px;
@@ -62,9 +62,7 @@ export const News = ({ data }) => {
     <StyledSection className="py-0 pb-6" id="news">
       <div className="container">
         <div className="text-center">
-          <h5 className="fs-3 fs-lg-5 lh-sm mb-0 text-uppercase text-dark mb-3">
-            {titre}
-          </h5>
+          <SectionTitle className="text-dark">{titre}</SectionTitle>
         </div>
         <div className="row h-100 d-lg-flex align-items-center mb-4">
           <div className="col-6">

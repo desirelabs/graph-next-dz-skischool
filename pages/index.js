@@ -14,6 +14,10 @@ const HOMEPAGE_QUERY = `{
   }
   allServices {
     titre
+    additionnalImage{
+      url
+      alt
+    }
     paragraphe
     image{
       url
