@@ -50,6 +50,12 @@ const HOMEPAGE_QUERY = `{
     tarif
     titreDeTarif
   }
+  allContacts{
+    titre
+    infosDeContact
+    paragraphe
+    dTails
+  }
 }`;
 
 export async function getStaticProps() {
@@ -62,7 +68,7 @@ export async function getStaticProps() {
 }
 
 const Index = ({ data }) => {
-  const { allHomes, allServices, allNews, allPrixes } = data;
+  const { allHomes, allServices, allNews, allPrixes, allContacts } = data;
   return (
     <Layout>
       <Nav />
@@ -70,7 +76,7 @@ const Index = ({ data }) => {
       <Services data={allServices[0]} />
       <News data={allNews[0]} />
       <Prices data={allPrixes} />
-      <Contact />
+      <Contact data={allContacts[0]} />
     </Layout>
   );
 };

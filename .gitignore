@@ -1,7 +1,7 @@
 node_modules/
-idea/
-vim/
-vscode/
+.idea/
+.vim/
+.vscode/
 out/
 .next/
 .env
