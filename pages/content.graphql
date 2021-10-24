@@ -1,0 +1,84 @@
+{
+    _site {
+        favicon{
+            url
+        }
+        faviconMetaTags{attributes content tag}
+        globalSeo{siteName fallbackSeo{description image {url} title}}
+    }
+    allHomes {
+        heading
+        headingCopy1
+        accroche
+    }
+    allServices {
+        accroche
+        titreDeSection
+        additionnalImage{
+            url
+            alt
+        }
+        paragraphe
+        image{
+            url
+            alt
+        }
+        titreCopy1
+        paragrapheCopy1
+        imageCopy1{
+            url
+            alt
+        }
+        titreCopy2
+        paragrapheCopy2
+        imageCopy2{
+            url
+            alt
+        }
+        titreCopy3
+        paragrapheCopy3
+        imageCopy3{
+            url
+            alt
+        }
+        titreCopy4
+        paragrapheCopy4
+        imageCopy4{
+            url
+            alt
+        }
+        titreCopy5
+    }
+    allNews {
+        titre
+        accroche
+        lienDuRSeauSocial
+        icone{
+            url
+        }
+        lienDuRSeauSocialCopy1
+        iconeCopy1{
+            url
+        }
+        imagesDeLaGalerie{
+            responsiveImage{
+                src
+                srcSet
+            }
+        }
+    }
+    allPrixes{
+        titreDeSection
+        order
+        suggR
+        descriptionDeTarif
+        tarif
+        titreDeTarif
+    }
+    allContacts{
+        titre
+        infosDeContact
+        paragraphe
+        dTails
+    }
+}

@@ -11,10 +11,10 @@ const LeftReseau = ({ accroche, lien, icone }) => {
       {accroche.split("us").map(
         (chunck, i) =>
           i === 0 && (
-            <span className="text-dark">
+            <span key={chunck} className="text-dark">
               {" "}
               {chunck + "us"}
-              <a href={lien}>
+              <a href={lien} target="_blank" rel="noreferrer">
                 <Img src={icone.url} alt="" />
               </a>
             </span>
@@ -30,8 +30,8 @@ const RightReseau = ({ accroche, lien, icone }) => {
       {accroche.split("us").map(
         (chunck, i) =>
           i === 1 && (
-            <span className="text-dark">
-              <a href={lien}>
+            <span key={chunck} className="text-dark">
+              <a href={lien} target="_blank" rel="noreferrer">
                 <Img src={icone.url} alt="" />
               </a>
               {chunck}

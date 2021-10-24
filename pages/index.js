@@ -6,14 +6,37 @@ import { News } from "../components/news";
 import { Prices } from "../components/prices";
 import { Contact } from "../components/contact";
 import { request } from "../lib/datocms";
+import { Head } from "next/document";
 
 const HOMEPAGE_QUERY = `{
+  _site {
+    favicon{
+      url
+    }
+    faviconMetaTags{
+      attributes
+      content
+      tag
+    }
+    globalSeo{
+      siteName
+      fallbackSeo{
+        description
+        image {
+          url
+        }
+        title
+      }
+    }
+  }
   allHomes {
     heading
     headingCopy1
+    accroche
   }
   allServices {
-    titre
+    accroche
+    titreDeSection
     additionnalImage{
       url
       alt
@@ -68,6 +91,7 @@ const HOMEPAGE_QUERY = `{
     }
   }
   allPrixes{
+    titreDeSection
     order
     suggR
     descriptionDeTarif
@@ -93,15 +117,18 @@ export async function getStaticProps() {
 
 const Index = ({ data }) => {
   const { allHomes, allServices, allNews, allPrixes, allContacts } = data;
+
   return (
-    <Layout>
-      <Nav />
-      <Home data={allHomes[0]} />
-      <Services data={allServices[0]} />
-      <News data={allNews[0]} />
-      <Prices data={allPrixes} />
-      <Contact data={allContacts[0]} />
-    </Layout>
+    <>
+      <Layout>
+        <Nav />
+        <Home data={allHomes[0]} />
+        <Services data={allServices[0]} />
+        <News data={allNews[0]} />
+        <Prices data={allPrixes} />
+        <Contact data={allContacts[0]} />
+      </Layout>
+    </>
   );
 };
 

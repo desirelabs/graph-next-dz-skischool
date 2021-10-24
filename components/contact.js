@@ -22,7 +22,7 @@ export const Contact = (props) => {
               <Markdown>{infosDeContact}</Markdown>
             </h5>
             <p className="mb-4">
-              <Markdown>{dTails}</Markdown>
+              <Markdown options={{ forceBlock: false }}>{dTails}</Markdown>
             </p>
           </div>
           <div className="col-lg-6">

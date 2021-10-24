@@ -16,6 +16,10 @@ const H1 = styled.h1`
   ${shadow}
 `;
 
+const H2 = styled.h2`
+  ${shadow}
+`;
+
 const Text = styled.h2`
   ${shadow}
 `;
@@ -27,12 +31,12 @@ const LargeButton = styled.a`
 `;
 
 export const Home = ({ data }) => {
-  const { heading, headingCopy1 } = data;
+  const { heading, headingCopy1, accroche } = data;
   return (
     <Section className="py-0" id="home">
       <BgHolder className="bg-holder" />
       <div className="container">
-        <div className="row align-items-center min-vh-75 min-vh-xl-100">
+        <div className="row align-items-center min-vh-75 align-items-end">
           <div className="col-md-8 col-lg-6 text-md-start text-center">
             <H1 className="display-1 lh-sm text-uppercase text-light">
               {heading}
@@ -47,6 +51,11 @@ export const Home = ({ data }) => {
                 Discover now
               </LargeButton>
             </Text>
+          </div>
+        </div>
+        <div className="row align-items-center min-vh-25">
+          <div className="col">
+            <H2 className="text-center mb-5 text-light">{accroche}</H2>
           </div>
         </div>
       </div>

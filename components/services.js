@@ -17,7 +17,8 @@ const SpacerBg = styled.div`
 
 export const Services = ({ data }) => {
   const {
-    titre,
+    accroche,
+    titreDeSection,
     additionnalImage,
     paragraphe,
     image,
@@ -47,7 +48,7 @@ export const Services = ({ data }) => {
       <div className="container-lg pb-5">
         <div className="row justify-content-center pb-6">
           <div className="col-lg-7 mx-auto text-center my-5">
-            <SectionTitle>Services</SectionTitle>
+            <SectionTitle>{titreDeSection}</SectionTitle>
           </div>
         </div>
         <div className="row flex-center pb-6">
@@ -57,7 +58,7 @@ export const Services = ({ data }) => {
           <div className="col-sm-10 col-md-6 col-lg-6 text-center text-md-start">
             <div className="row h-100">
               <div className="col-12">
-                <SectionTitle>{titre}</SectionTitle>
+                <SectionTitle>{accroche}</SectionTitle>
                 <p className="my-4 pe-xl-5">{paragraphe}</p>
               </div>
             </div>
@@ -91,12 +92,12 @@ export const Services = ({ data }) => {
               <Markdown>{paragrapheCopy4}</Markdown>
             </p>
           </div>
-          <img src={imageCopy4.url} width="100%" alt={imageCopy4.alt} />
         </div>
         <div className="row flex-center">
           <div className="col-12 order-md-0 text-center text-md-start">
             <SectionTitle className="text-center">{titreCopy5}</SectionTitle>
           </div>
+          <img src={imageCopy4.url} width="100%" alt={imageCopy4.alt} />
         </div>
       </div>
     </Section>

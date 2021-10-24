@@ -1,5 +1,5 @@
-import Document from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import Document, { Head, NextScript, Html, Main } from "next/document";
+import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -26,5 +26,22 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal();
     }
+  }
+
+  render() {
+    return (
+      <Html lang={"en"}>
+        <Head>
+          <meta charSet="utf-8" />
+          <title>DZ Ski School, école de ski à Courchevel</title>
+          <meta content="DZ  is a ski school directed by passionate professionals to offer you the best in lessons and services." />
+          <link rel="canonical" href="https://dz-skischool.com" />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }
