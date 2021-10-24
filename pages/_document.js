@@ -34,7 +34,10 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <title>DZ Ski School, école de ski à Courchevel</title>
-          <meta content="DZ  is a ski school directed by passionate professionals to offer you the best in lessons and services." />
+          <meta
+            name="description"
+            content="DZ  is a ski school directed by passionate professionals to offer you the best in lessons and services."
+          />
           <link rel="canonical" href="https://dz-skischool.com" />
         </Head>
         <body>
