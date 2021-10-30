@@ -6,7 +6,6 @@ import { News } from "../components/news";
 import { Prices } from "../components/prices";
 import { Contact } from "../components/contact";
 import { request } from "../lib/datocms";
-import { Head } from "next/document";
 
 const HOMEPAGE_QUERY = `{
   _site {
@@ -116,12 +115,13 @@ export async function getStaticProps() {
 }
 
 const Index = ({ data }) => {
-  const { allHomes, allServices, allNews, allPrixes, allContacts } = data;
+  const { _site, allHomes, allServices, allNews, allPrixes, allContacts } =
+    data;
 
   return (
     <>
       <Layout>
-        <Nav />
+        <Nav logo={_site.faviconMetaTags} />
         <Home data={allHomes[0]} />
         <Services data={allServices[0]} />
         <News data={allNews[0]} />

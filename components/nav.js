@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 const StyledNav = styled.nav`
   background-image: none;
-  background-comor: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 `;
 
 export const Nav = () => {
@@ -12,9 +13,15 @@ export const Nav = () => {
       data-navbar-on-scroll="data-navbar-on-scroll"
     >
       <div className="container">
-        <a className="navbar-brand d-inline-flex" href="index.html">
-          <span className="text-light fs-2 fw-bold ms-2">DZ Ski School</span>
-        </a>
+        <Link href={"/"}>
+          <a className="navbar-brand d-inline-flex">
+            <img
+              src="https://www.datocms-assets.com/56203/1635576866-untitled-edited.png?auto=format"
+              width="80"
+              alt="DZ-Ski School"
+            />
+          </a>
+        </Link>
         <button
           className="navbar-toggler collapsed"
           type="button"
@@ -24,7 +31,7 @@ export const Nav = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon">{""}</span>
         </button>
         <div
           className="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0"
