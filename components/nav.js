@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
+import { useState } from "react";
 
 const StyledNav = styled.nav`
   background-image: none;
@@ -7,6 +8,10 @@ const StyledNav = styled.nav`
 `;
 
 export const Nav = () => {
+  const [toggled, setToggle] = useState(false);
+
+  const toggle = () => setToggle(!toggled);
+
   return (
     <StyledNav
       className="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block bg-black"
@@ -23,18 +28,23 @@ export const Nav = () => {
           </a>
         </Link>
         <button
-          className="navbar-toggler collapsed"
+          className={toggled ? "navbar-toggler collapsed" : "navbar-toggler"}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onClick={toggle}
         >
           <span className="navbar-toggler-icon">{""}</span>
         </button>
         <div
-          className="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0"
+          className={
+            toggled
+              ? "collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0 show"
+              : "collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0"
+          }
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-end flex-grow-1">
