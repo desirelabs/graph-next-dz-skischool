@@ -64,19 +64,15 @@ export const Services = ({ data }) => {
             </div>
           </div>
         </div>
-        <div className="row flex-center pb-6">
+        <div className="row pb-6">
           {services.map(({ titre, image, description }) => (
             <div
               key={titre}
               className="col-sm-10 col-md-4 col-lg-4 text-center text-md-start"
             >
-              <div className="row h-100">
-                <div className="col-12">
-                  <SectionTitle className="text-center">{titre}</SectionTitle>
-                  <img src={image.url} width="100%" alt={image.alt} />
-                  <p className="my-4 pe-xl-5">{description}</p>
-                </div>
-              </div>
+              <SectionTitle className="text-center">{titre}</SectionTitle>
+              <img src={image.url} width="100%" alt={image.alt} />
+              <p className="my-4 pe-xl-5">{description}</p>
             </div>
           ))}
         </div>
