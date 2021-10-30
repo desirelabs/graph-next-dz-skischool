@@ -1,3 +1,5 @@
+import { Section, SectionTitle } from "./styled";
+
 const Card = (props) => {
   const { titreDeTarif, descriptionDeTarif, tarif } = props;
   return (
@@ -8,10 +10,7 @@ const Card = (props) => {
         {descriptionDeTarif}
       </div>
       <div className="card-footer">
-        <a
-          className="btn btn-outline-success btn-md mb-1 w-100"
-          href="#contact"
-        >
+        <a className="btn btn-primary btn-lg w-100" href="#contact">
           <span>Book now</span>
         </a>
       </div>
@@ -23,14 +22,14 @@ export const Prices = ({ data }) => {
     return null;
   }
   return (
-    <section className="py-6 bg-dark pricing" id="prices">
+    <Section appearance="dark" id="prices">
       <div className="pricing5 py-5">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-8 text-center">
-              <h3 className="fs-3 fs-lg-5 lh-sm mb-0 text-uppercase">
+              <SectionTitle appearance="light">
                 {data.find((el) => el.order === 1)?.titreDeSection}
-              </h3>
+              </SectionTitle>
             </div>
           </div>
           <div className="row text-center pricing-box">
@@ -55,6 +54,6 @@ export const Prices = ({ data }) => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 import { useState } from "react";
+import { Button } from "./styled";
 
 const StyledNav = styled.nav`
   background-image: none;
@@ -27,7 +28,7 @@ export const Nav = () => {
             />
           </a>
         </Link>
-        <button
+        <Button
           className={toggled ? "navbar-toggler collapsed" : "navbar-toggler"}
           type="button"
           data-bs-toggle="collapse"
@@ -38,7 +39,7 @@ export const Nav = () => {
           onClick={toggle}
         >
           <span className="navbar-toggler-icon">{""}</span>
-        </button>
+        </Button>
         <div
           className={
             toggled

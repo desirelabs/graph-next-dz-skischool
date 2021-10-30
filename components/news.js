@@ -62,7 +62,7 @@ export const News = ({ data }) => {
     <StyledSection className="py-0 pb-6" id="news">
       <div className="container">
         <div className="text-center">
-          <SectionTitle className="text-dark">{titre}</SectionTitle>
+          <SectionTitle appearance="dark">{titre}</SectionTitle>
         </div>
         <div className="row h-100 d-lg-flex align-items-center mb-4">
           <div className="col-6">

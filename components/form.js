@@ -1,3 +1,5 @@
+import { Button } from "./styled";
+
 export const ContactForm = () => {
   return (
     <form
@@ -33,9 +35,7 @@ export const ContactForm = () => {
         </label>
         <textarea className="form-control" id="message" rows="3" />
       </div>
-      <button type="submit" className="btn btn-primary">
-        Submit
-      </button>
+      <Button type="submit">Submit</Button>
     </form>
   );
 };
