@@ -28,3 +28,8 @@ export const Button = styled.button.attrs({
 })`
   height: 45px;
 `;
+
+export const Footer = styled.footer`
+  text-align: center;
+  padding: 1rem;
+`;

@@ -1,5 +1,6 @@
 import { Layout } from "../components/layout";
 import { Nav } from "../components/nav";
+import { Foot } from "../components/footer";
 import { Home } from "../components/home";
 import { Services } from "../components/services";
 import { News } from "../components/news";
@@ -127,6 +128,7 @@ const Index = ({ data }) => {
         <News data={allNews[0]} />
         <Prices data={allPrixes} />
         <Contact data={allContacts[0]} />
+        <Foot />
       </Layout>
     </>
   );
