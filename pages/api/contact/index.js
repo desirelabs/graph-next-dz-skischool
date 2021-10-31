@@ -5,7 +5,7 @@ sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_PKEY);
 async function setMail(data) {
   const { name, email, message } = data.body;
   const msg = {
-    to: "francklebas@protonmail.ch",
+    to: process.env.NEXT_PUBLIC_EMAIL_RECIPIENT,
     from: "contact@wearelion.fr",
     subject: `[DZ-Skischool] message de ${email} - ${name}`,
     text: message,
