@@ -8,7 +8,8 @@ import { Prices } from "../components/prices";
 import { Contact } from "../components/contact";
 import { request } from "../lib/datocms";
 
-const HOMEPAGE_QUERY = `{
+export async function getServerSideProps() {
+  const HOMEPAGE_QUERY = `{
   _site {
     favicon{
       url
@@ -105,8 +106,6 @@ const HOMEPAGE_QUERY = `{
     dTails
   }
 }`;
-
-export async function getStaticProps() {
   const data = await request({
     query: HOMEPAGE_QUERY,
   });
