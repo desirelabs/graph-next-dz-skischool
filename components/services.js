@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Section, SectionTitle } from "./styled";
 import Markdown from "markdown-to-jsx";
+import { Fragment } from "react";
 
 const SpacerBg = styled.div`
   background-image: url(${(props) => props.image});
@@ -91,7 +92,18 @@ export const Services = ({ data }) => {
         </div>
         <div className="row flex-center">
           <div className="col-12 order-md-0 text-center text-md-start">
-            <SectionTitle appearance="light">{titreCopy5}</SectionTitle>
+            <SectionTitle appearance="light">
+              {titreCopy5.split("\\n").map((el, i) =>
+                i === 0 ? (
+                  <Fragment key={i}>{el}</Fragment>
+                ) : (
+                  <Fragment key={i}>
+                    <br />
+                    {el}
+                  </Fragment>
+                )
+              )}
+            </SectionTitle>
           </div>
           <img src={imageCopy4.url} width="100%" alt={imageCopy4.alt} />
         </div>

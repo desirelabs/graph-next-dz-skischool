@@ -5,6 +5,13 @@ const Img = styled.img`
   margin: 12px;
 `;
 
+const InnerText = styled.span`
+  display: none;
+  @media (min-width: 768px) {
+    display: inline-block;
+  }
+`;
+
 const LeftReseau = ({ accroche, lien, icone }) => {
   return (
     <span className="float-end">
@@ -12,8 +19,7 @@ const LeftReseau = ({ accroche, lien, icone }) => {
         (chunck, i) =>
           i === 0 && (
             <span key={chunck} className="text-dark">
-              {" "}
-              {chunck + "us"}
+              <InnerText> {chunck + "us"}</InnerText>
               <a href={lien} target="_blank" rel="noreferrer">
                 <Img src={icone.url} alt="" />
               </a>
@@ -34,7 +40,7 @@ const RightReseau = ({ accroche, lien, icone }) => {
               <a href={lien} target="_blank" rel="noreferrer">
                 <Img src={icone.url} alt="" />
               </a>
-              {chunck}
+              <InnerText>{chunck}</InnerText>
             </span>
           )
       )}
