@@ -6,7 +6,7 @@ async function setMail(data) {
   const { name, email, message } = data.body;
   const msg = {
     to:
-      process.env.NEXT_PUBLIC_EMAIL_RECIPIENT.indexOf(",") !== -1
+      process.env.NEXT_PUBLIC_EMAIL_RECIPIENT.indexOf(";") !== -1
         ? process.env.NEXT_PUBLIC_EMAIL_RECIPIENT.split(";")
         : process.env.NEXT_PUBLIC_EMAIL_RECIPIENT,
     from: process.env.NEXT_PUBLIC_EMAIL_SENDER,
