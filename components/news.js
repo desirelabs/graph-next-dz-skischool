@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 import { SectionTitle } from "./styled";
 
 const Img = styled.img`
@@ -21,7 +22,7 @@ const LeftReseau = ({ accroche, lien, icone }) => {
             <span key={chunck} className="text-dark">
               <InnerText> {chunck + "us"}</InnerText>
               <a href={lien} target="_blank" rel="noreferrer">
-                <Img src={icone.url} alt="" />
+                <Image src={icone.url} width="80" height="80" alt="Facebook" />
               </a>
             </span>
           )
@@ -38,7 +39,7 @@ const RightReseau = ({ accroche, lien, icone }) => {
           i === 1 && (
             <span key={chunck} className="text-dark">
               <a href={lien} target="_blank" rel="noreferrer">
-                <Img src={icone.url} alt="" />
+                <Image src={icone.url} width="80" height="80" alt="Instagram" />
               </a>
               <InnerText>{chunck}</InnerText>
             </span>

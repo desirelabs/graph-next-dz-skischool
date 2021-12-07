@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 import { Section, SectionTitle } from "./styled";
 import Markdown from "markdown-to-jsx";
 import { Fragment } from "react";
@@ -54,7 +55,12 @@ export const Services = ({ data }) => {
         </div>
         <div className="row flex-center pb-6">
           <div className="col-lg-6 col-md-12 order-md-0 text-center text-md-start">
-            <img src={image.url} width="100%" alt={image.alt} />
+            <Image
+              src={image.url}
+              width={image.width}
+              height={image.height}
+              alt={image.alt}
+            />
           </div>
           <div className="col-sm-10 col-md-6 col-lg-6 text-center text-md-start">
             <div className="row h-100">
@@ -72,7 +78,12 @@ export const Services = ({ data }) => {
               className="col-sm-10 col-md-4 col-lg-4 text-center text-md-start"
             >
               <SectionTitle appearance="light">{titre}</SectionTitle>
-              <img src={image.url} width="100%" alt={image.alt} />
+              <Image
+                src={image.url}
+                width={image.width}
+                height={image.height}
+                alt={image.alt}
+              />
               <p className="my-4 pe-xl-5">{description}</p>
             </div>
           ))}
@@ -105,7 +116,12 @@ export const Services = ({ data }) => {
               )}
             </SectionTitle>
           </div>
-          <img src={imageCopy4.url} width="100%" alt={imageCopy4.alt} />
+          <Image
+            src={imageCopy4.url}
+            width={imageCopy4.width}
+            height={imageCopy4.height}
+            alt={imageCopy4.alt}
+          />
         </div>
       </div>
     </Section>

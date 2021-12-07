@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Button } from "./styled";
 
@@ -21,8 +22,9 @@ export const Nav = () => {
       <div className="container">
         <Link href={"/"}>
           <a className="navbar-brand d-inline-flex">
-            <img
+            <Image
               src="https://www.datocms-assets.com/56203/1635576866-untitled-edited.png?auto=format"
+              height="27"
               width="80"
               alt="DZ-Ski School"
             />

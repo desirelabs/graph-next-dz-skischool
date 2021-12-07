@@ -7,6 +7,7 @@ import { News } from "../components/news";
 import { Prices } from "../components/prices";
 import { Contact } from "../components/contact";
 import { request } from "../lib/datocms";
+import Head from "next/head";
 
 export async function getServerSideProps() {
   const HOMEPAGE_QUERY = `{
@@ -39,35 +40,47 @@ export async function getServerSideProps() {
     accroche
     titreDeSection
     additionnalImage{
+			width
+			height
       url
       alt
     }
     paragraphe
     image{
+			width
+			height
       url
       alt
     }
     titreCopy1
     paragrapheCopy1
     imageCopy1{
+			width
+			height
       url
       alt
     }
     titreCopy2
     paragrapheCopy2
     imageCopy2{
+			width
+			height
       url
       alt
     }
     titreCopy3
     paragrapheCopy3
     imageCopy3{
+			width
+			height
       url
       alt
     }
     titreCopy4
     paragrapheCopy4
     imageCopy4{
+			width
+			height
       url
       alt
     }
@@ -120,6 +133,13 @@ const Index = ({ data }) => {
 
   return (
     <>
+      <Head>
+        <title>DZ Ski School, école de ski à Courchevel</title>
+        <meta
+          name="description"
+          content="DZ  is a ski school directed by passionate professionals to offer you the best in lessons and services."
+        />
+      </Head>
       <Layout>
         <Nav logo={_site.faviconMetaTags} />
         <Home data={allHomes[0]} />

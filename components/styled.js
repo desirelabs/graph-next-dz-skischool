@@ -24,7 +24,7 @@ export const SectionTitle = styled.h2.attrs({
 `;
 
 export const Button = styled.button.attrs({
-  className: "btn btn-lg btn-primary w-100",
+  className: "btn btn-lg btn-primary",
 })`
   height: 45px;
 `;
