@@ -6,7 +6,7 @@ const Card = (props) => {
     <div className="card card-shadow border-0 mb-4">
       <div className="card-body">
         <h6 className="text-dark mt-3 mb-0">{titreDeTarif}</h6>
-        <h2 className="text-dark mt-0 monthly">{tarif}</h2>
+        <h2 className="text-dark mt-0 monthly">From {tarif}</h2>
         {descriptionDeTarif}
       </div>
       <div className="card-footer">
